@@ -6,16 +6,35 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Restore audio playback state from localStorage
   const savedTime = localStorage.getItem("audioTime");
   const wasPlaying = localStorage.getItem("audioPlaying") === "true";
   
-  if (savedTime !== null) {
-    audio.currentTime = parseFloat(savedTime);
+  if (savedTime !== null && !isNaN(parseFloat(savedTime))) {
+    try {
+      audio.currentTime = parseFloat(savedTime);
+    } catch (e) {
+      console.log('Failed to set audio.currentTime:', e);
+    }
   }
-  
+
+  function tryPlay() {
+    return audio.play().catch(err => {
+      console.log("Autoplay failed:", err);
+      throw err;
+    });
+  }
+
   if (wasPlaying) {
-    audio.play().catch(err => console.log("Autoplay prevented:", err));
+    tryPlay().catch(() => {
+      function onFirstGesture() {
+        audio.play().catch(err => console.log("Play after gesture failed:", err));
+        window.removeEventListener('touchstart', onFirstGesture, {passive: true});
+        window.removeEventListener('click', onFirstGesture);
+      }
+
+      window.addEventListener('touchstart', onFirstGesture, {passive: true});
+      window.addEventListener('click', onFirstGesture);
+    });
   }
 
   toggleImage.addEventListener("click", async function () {
@@ -30,9 +49,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Save audio state before leaving the page
-  window.addEventListener("beforeunload", function () {
-    localStorage.setItem("audioTime", audio.currentTime);
-    localStorage.setItem("audioPlaying", !audio.paused);
+  function saveState() {
+    try {
+      localStorage.setItem("audioTime", audio.currentTime);
+      localStorage.setItem("audioPlaying", !audio.paused);
+    } catch (e) {
+    }
+  }
+
+  const saveInterval = setInterval(saveState, 1000);
+
+  window.addEventListener('pagehide', function () {
+    saveState();
+  });
+
+  window.addEventListener('beforeunload', function () {
+    saveState();
+    clearInterval(saveInterval);
   });
 });
