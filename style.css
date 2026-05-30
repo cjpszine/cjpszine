@@ -1,0 +1,1079 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Courier New', Courier, monospace;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+
+    body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: pink url('blue5.gif');
+    cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+    }
+
+    .note-overlay {
+      position: fixed;
+      top: 300px;
+      right: 1050px;
+      width: 180px;
+      height: auto;
+      z-index: 9999;
+      pointer-events: none;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      max-width: 900px;
+      background: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 1%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .header, .footer {
+      background: #c7f4ff;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    .header {
+        background: url('banner.gif') no-repeat center center / cover;
+        color: white;
+        height: 9vw;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .header span {
+        display: inline-block;
+        font-weight: bold;
+        filter:
+            drop-shadow(1px 1px 0 rgb(100, 160, 202))
+            drop-shadow(-1px 1px 0 rgb(100, 160, 202))
+            drop-shadow(0 -1px 0 rgb(100, 160, 202))
+            drop-shadow(1px 0 rgb(100, 160, 202));
+        transition: ease-in-out 0.3s;
+        font-size: 3vw;
+    }
+
+    .header span a {
+        color: white;
+        text-decoration: none;
+        transition: 0.2s ease-in-out;
+        cursor: url('https://64.media.tumblr.com/tumblr_m35lfjw3Qf1rnr4eb.png'), auto;
+    }
+
+    .header span a:hover {
+        filter:
+        drop-shadow(1px 1px 0 rgb(60, 110, 160))
+        drop-shadow(-1px 1px 0 rgb(60, 110, 160))
+        drop-shadow(0 -1px 0 rgb(60, 110, 160))
+        drop-shadow(1px 0 rgb(60, 110, 160));
+    }
+
+    .content {
+      display: flex;
+      gap: 8px;
+      margin: 6px 0; /* reduced to create a smaller gap under the buttons */
+    }
+
+    .col1, .col2 {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .col1 {
+      flex: 0.5;
+      margin-top: 90px;
+    }
+
+    .col2 {
+      flex: 0.9;
+    }
+
+    .box {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 0;
+      overflow: auto;
+      color: black;
+      box-sizing: border-box;
+      height: auto;
+      min-height: 100px;
+    }
+
+    .box p:last-child,
+    .box h1:last-child,
+    .box h2:last-child,
+    .box h3:last-child {
+      margin-bottom: 0;
+    }
+
+    .box.tall {
+      height: 550px;      display: flex;
+      flex-direction: column;    }
+
+    .box.short {
+      height: 157px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      overflow: hidden;
+    }
+
+    .icon-link-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-link-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      padding: 4px;
+      border-radius: 10px;
+      background: #e0f4ff;
+      border: 2px solid #78b6d9;
+      box-shadow: 0 4px 0 #a6ddf5;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+    }
+
+    .icon-link-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .jonipet {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      overflow: visible;
+    }
+
+    .jonipet iframe {
+      display: block;
+      width: min(100%, 314px);
+      max-width: 100%;
+      aspect-ratio: 314 / 321;
+      height: 95%;
+      border: 0;
+    }
+
+    body.girlhood-page {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start !important;
+      min-height: 100vh;
+      padding: 20px 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .girlhood-main {
+      display: block;
+      height:1250px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .girlhood-page .button-row {
+      width: 100%;
+      margin-left: 0;
+      justify-content: center;
+    }
+
+    .girlhood-page .linkbutton {
+      width: 280px;
+    }
+
+    .girlhood-page .zine {
+      margin-top: 12px;
+    }
+
+    .girlhood-page .girlhood-chatbox {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+    }
+
+    .girlhood-page .girlhood-chatbox iframe {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      height: 300px;
+    }
+
+.icon-link-button:hover {
+      transform: none;
+      box-shadow: 0 4px 0 #a6ddf5;
+    }
+
+    .icon-link-label {
+      color: #133c5a;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .box.blue3 {
+      background: url('love.gif') repeat;
+    }
+
+    .box.blue4 {
+        background: url('blue4.gif') repeat;
+    }
+    
+    .box.blue5 {
+        background-image: url('blue5.gif') repeat;
+    }
+
+    /* Text styles */
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+    }
+
+    /* Center h1 in the right column tall box */
+    .col2 .box.tall h1 {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #305072;
+      margin-bottom: 0.5em;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #446e91;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: black;
+      margin-bottom: 1em;
+    }
+
+    strong {
+        color: #465864;
+        font-weight: 10%;
+        font-family: 'winkle';
+        font-size: 30px;
+        background: rgba(167, 31, 133, 0.15);
+    }
+
+    audio {
+        display: none;
+    }
+
+    .box a {
+        position: relative;
+        color: #2255aa;
+        text-decoration: none;
+        font-weight: bolder;
+        transition: color 0.3s ease;
+        cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+    }
+
+    .box a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: #2255aa;
+        transition: width 0.3s ease;
+        border-radius: 1px;
+        cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+    }
+
+.staff-grid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px 14px;
+    }
+
+    .staff-grid strong {
+      width: 100%;
+      text-align: center;
+    }
+
+.staff-card {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: winkle;
+      font-weight: 30;
+      text-align: center;
+      padding: 4px 8px;
+      border-radius: 10px;
+      cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+      background: rgba(255, 231, 233, 0.5);
+    }
+
+    .staff-card img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .staff-card span {
+      font-size: 20px;
+      line-height: 1;
+      white-space: nowrap;
+      color: #694E4E;
+    }
+
+
+    /* button styling */
+    button {
+        position: relative;
+        display: inline-block;
+        cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    button.buttonstyle {
+        font-weight: 600;
+        color: #133c5a;
+        text-transform: uppercase;
+        padding: 0.25em 1em;
+        background: #e0f4ff;
+        border: 2px solid #78b6d9;
+        border-radius: 0.75em;
+        transform-style: preserve-3d;
+        transition:
+            background 150ms cubic-bezier(0, 0, 0.58, 1),
+            transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    }
+
+    button.buttonstyle::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #c2eaff;
+        border-radius: inherit;
+        box-shadow: 0 0 0 2px #78b6d9, 0 0.625em 0 0 #a6ddf5;
+        transform: translate3d(0, 0.75em, -1em);
+        transition:
+            transform 150ms cubic-bezier(0, 0, 0.58, 1),
+            box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    }
+
+    button.buttonstyle:hover {
+        background: #d0eeff;
+        transform: translate(0, 0.25em);
+    }
+
+    button.buttonstyle:hover::before {
+        box-shadow: 0 0 0 2px #78b6d9, 0 0.5em 0 0 #a6ddf5;
+        transform: translate3d(0, 0.5em, -1em);
+    }
+
+    button.buttonstyle:active {
+        background: #d0eeff;
+        transform: translate(0, 0.75em);
+    }
+
+    button.buttonstyle:active::before {
+        box-shadow: 0 0 0 2px #78b6d9, 0 0 #a6ddf5;
+        transform: translate3d(0, 0, -1em);
+    }
+
+
+
+    /* scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: navy;
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: skyblue;
+    }
+
+    /* Borders */
+    /* 1. Double Border */
+
+    .border-double {
+      border: 5px double #7ec8e3;
+      padding: 8px; 
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* 2. Retro Pixel-Like Frame */
+    .border-pixel {
+      border: 4px solid #222;
+      box-shadow: inset -2px -2px 0px 0px #fff, inset 2px 2px 0px 0px #999;
+      background: #fefefe;
+      padding: 8px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* 3. Etched Border */
+    .border-etched {
+      border: 4px groove #aaa;
+      padding: 8px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .footer {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        background: #c7f4ff; 
+        padding: 15px 0;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    .footer span {
+        display: inline-block;
+        padding-left: 100%;
+        font-weight: bold;
+        color: white;
+        filter:
+            drop-shadow(1px 1px 0 rgb(100, 160, 202))
+            drop-shadow(-1px 1px 0 rgb(100, 160, 202))
+            drop-shadow(0 -1px 0 rgb(100, 160, 202))
+            drop-shadow(1px 0 rgb(100, 160, 202));
+        animation: marquee 10s linear infinite;
+        text-decoration: none;
+        transition: ease-in-out 0.3s;
+    }
+
+    @keyframes marquee {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: 28%;
+  margin-top: 6px;
+  margin-bottom: 1px;
+}
+
+.linkbutton {
+    text-align: center;
+    width: 179px;
+    padding: 10px;
+
+    background: linear-gradient(to bottom, white 15%, #ffc6ee);
+
+    border: 2px outset #ffc6ee;
+    border-radius: 10px;
+    cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+
+    transition: 0.2s;
+}
+
+.linkbutton:hover {
+    border: 2px inset #ffc6ee;
+    transform: translateY(-2px);
+}
+
+.linkbutton a {
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+
+    text-shadow:
+        -2px 0 #ffafe7,
+         0 2px #ffafe7,
+         2px 0 #ffafe7,
+         0 -2px #ffafe7;
+}
+
+.aboutimg {
+    width: 35%;
+    height: auto;
+    align-content: left;
+
+}
+
+.titleimg {
+    width: 67%;
+    height: auto;
+}
+
+.meowimg {
+    width: 15%;
+    height: auto;
+    align-content: right;
+    margin-left: 55px;
+}
+  
+    #lol {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    pointer-events: none;
+  }
+
+
+  .img2 {
+    /* album's cover image u can change the size! */
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 530px;
+    top: 220px;
+    background-color: black;
+    color: black;
+    z-index: 1001;
+    pointer-events: auto;
+  }
+
+  .img1 {
+    /* cd image u can change the size too */
+    position: absolute;
+    width: auto;
+    height: 130px;
+    left: 610px;
+    top: 240px;
+    z-index: 1000;
+    pointer-events: auto;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+    cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+  }
+
+  .img1:hover {
+    cursor: help;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+.journalgrey {
+  border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAASJJREFUWEftWFsOwyAMG+flPJx3+6KqUlk24dGgsb+uITjOs0kf88s5f+1/M59LKUnR/xAKDxQBVC1WWLnLMELsvRej4YEyyyoLo5mt91a99tl6KG0HFFnGLG2NzSqPGLX6Kq6L0e2Behlj59wxqgY1A6C+bwZqY2ZWlqMOqBIE6+jocjQMKMpG1ZWtcm7XbwP0rRbaHaOzk6rZ9ezA6s6EkjhcZzpAW8sSG0rcjHqBsHMsN+A8qpYJBkB93wz09HpCrZvRbVroAQpC4LheLTuq3P8xqjLTK6c2mjDbPDZOwt0kO9jLJPvYe/R6dGFYoOqybDSTVh8c89BQMhsQ0k+BvgVMHaSlRf8KI1gDgOVp9kqnO+tXZ7s6tYVxPQuvbYD+AGIP2DqDx1CAAAAAAElFTkSuQmCC') 14 / 14px / 0 round;
+  border-width: 20px;
+  border-style: solid;
+}
+
+.librarybutton {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  padding: -100px -50px;
+
+  background: rgba(255, 231, 233, 0.5);
+  cursor: url('https://cdn.cursors-4u.net/previews/heart-chat-bubble-97dd6d06-32.webp') 32 32, auto !important;
+}
+
+.librarybutton .text {
+  color: black;
+  text-align: left;
+  font-size: 50px;
+}
+
+.librarybutton .help-img {
+  width: 120px;
+  height: auto;
+
+  -webkit-mask-image: url(mask.png);
+  -webkit-mask-size: 250%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+
+.librarybutton:hover .help-img {
+  -webkit-mask-size: 100%;
+  transform: rotate(-15deg);
+}
+
+.librarybutton:hover {
+  box-shadow: 0 0 10px #ffb6c1;
+}
+
+.librarybutton .text h6 {
+  font-family: 'quick-love';
+  color: #CA8787;
+  font-size: 30px;
+  font-weight: 40;
+}
+
+.librarybutton .text p {
+  font-family: 'winkle';
+  color: #694E4E;
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.help-img {
+  display: block;
+}
+
+.text p {
+  margin: 0;
+  font-size:15px;
+}
+
+.text h6 {
+  margin: 0;
+  font-size: 28px;
+}
+
+#cbox {
+    left: 40px;
+    bottom: -354px;
+    z-index: 9999;
+    position: fixed;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    border: 5px solid #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 0px 0px 1px #fedbdb;
+}
+
+#cbox:hover {
+    bottom: 0px;
+}
+    
+#cboxtitle {
+    width: 180px;
+    height: 15px;
+    background-color: #ffffff;
+    background-image: url('lala.png');
+    padding: 8px 5px 5px 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 10px;
+    color: #db9494;
+    text-shadow: 1px 1px 1px #ffffff;
+    text-transform: uppercase;
+}
+
+#cboxdesc {
+    width: 180px;
+    height: 40px;
+    padding: 5px;
+    background-color: #ffffff;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9px;
+    text-align: justify;
+    letter-spacing: 1px;
+    color: #a19090;
+}
+
+@font-face {
+font-family:'kiwi';
+src: url(https://dl.dropbox.com/s/388cvx0do21kj3n/KiwiSoda.ttf);
+}
+@font-face {
+font-family: 'winkle';
+src: url(https://dl.dropbox.com/s/mes7b666uvig5wc/Winkle-Regular.otf);
+}
+@font-face {
+font-family: 'quick-love';
+src: url(https://dl.dropbox.com/s/16ntpxj8fny66d6/Quick%20Love.ttf);
+}
+
+.about-title h1 {
+  font-family: 'kiwi';
+  font-size: 43px;
+  font-weight: bold;
+  color: #B5828C;
+  text-align: center;
+  word-spacing: 10px;
+}
+
+.divider img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  background: rgba(255, 231, 233, 0.5);
+  box-shadow: 0 0 10px #ffb6c1;
+}
+
+.about-text p{
+  font-family: 'winkle';
+  color: #694E4E;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: "Rotate your phone to landscape mode to view this site.";
+    display: block;
+    max-width: 320px;
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px solid #78b6d9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    color: #133c5a;
+    font-weight: bold;
+    line-height: 1.4;
+    z-index: 1;
+  }
+
+  .main {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  body {
+    align-items: flex-start;
+    padding: 6px;
+  }
+
+  .main {
+    width: min(82%, 900px);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 12px;
+    height: 1100px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .col2 {
+    order: 1;
+    width: 100%;
+    flex: none;
+  }
+
+  .col1 {
+    order: 2;
+    width: 100%;
+    flex: none;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .col1 > .box.short {
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-width: 0;
+  }
+
+  .mobile-decor {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .mobile-decor-note,
+  .mobile-decor-floats {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-decor-note {
+    margin-top: -200px;
+  }
+
+  .mobile-decor-floats {
+    inset: auto;
+    pointer-events: none;
+  }
+
+  .mobile-decor .note-overlay {
+    position: static;
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+    height: auto;
+    z-index: auto;
+  }
+
+  .mobile-decor .img1 {
+    position: relative;
+    left: -230px;
+    top: -130px;
+    width: 130px;
+    height: auto;
+  }
+
+  .mobile-decor .img2 {
+    position: relative;
+    left: -160px;
+    top: -130px;
+    width: 140px;
+    height: auto;
+  }
+
+  .mobile-decor .note-overlay {
+    position: relative;
+    left: -70px;
+    top: -70px;
+    width: 180px;
+    height: auto;
+  }
+
+  body.girlhood-page {
+    position: relative;
+    overflow-x: auto !important;
+    overflow-y: auto !important;
+  }
+
+  .girlhood-page .main {
+    height: auto !important;
+  }
+
+  .girlhood-page .note-overlay {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: auto !important;
+    display: block;
+    width: 180px;
+    height: auto;
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  .girlhood-page #lol {
+    position: absolute !important;
+    inset: auto !important;
+    width: auto !important;
+    height: auto !important;
+    pointer-events: none !important;
+    z-index: 9998;
+  }
+
+  .girlhood-page #lol img {
+    position: absolute !important;
+    display: block;
+    z-index: auto;
+  }
+
+  .girlhood-page #lol .img2 {
+    left: 0 !important;
+    top: 0 !important;
+    width: 150px;
+    height: auto;
+  }
+
+  .girlhood-page #lol .img1 {
+    left: 0 !important;
+    top: 110px !important;
+    width: 150px;
+    height: auto;
+  }
+
+  .girlhood-page .zine iframe {
+    height: 360px !important;
+    max-height: 360px !important;
+  }
+
+  .girlhood-page .girlhood-chatbox {
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    pointer-events: none;
+  }
+
+  .girlhood-page .girlhood-chatbox iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+    position: static;
+    right: auto;
+    top: auto;
+    pointer-events: auto;
+  }
+
+  .girlhood-page .button-row {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .girlhood-page .linkbutton {
+    width: 210px;
+  }
+
+  .jonipet {
+    flex: 1 1 40%;
+    width: auto;
+    align-self: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+
+  .jonipet iframe {
+    width: 100%;
+    max-width: 314px;
+    height: auto;
+    pointer-events: auto;
+    touch-action: auto;
+  }
+
+  .button-row {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .linkbutton {
+    width: 207px;
+  }
+
+  .header {
+    height: 120px !important;
+    min-height: 120px;
+  }
+
+  #cbox {
+    left: 40px;
+    bottom: -40px;
+  }
+
+  .credits {
+    margin-top: -130px;
+  }
+}
