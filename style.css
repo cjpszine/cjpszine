@@ -858,7 +858,6 @@ iframe {
 
   .main {
     width: min(82%, 900px);
-    max-width: 100%;
     margin: 0 auto;
     padding: 12px;
     border-radius: 12px;
@@ -1035,7 +1034,7 @@ iframe {
   }
 
   .girlhood-page .linkbutton {
-    width: 210px;
+    width: 190px;
   }
 
   .jonipet {
@@ -1060,7 +1059,7 @@ iframe {
   }
 
   .linkbutton {
-    width: 207px;
+    width: 190px;
   }
 
   .header {
