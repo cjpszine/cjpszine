@@ -821,7 +821,7 @@ iframe {
   }
 
   body::before {
-    content: "Rotate your phone to landscape mode to view this site.";
+    content: "Rotate your phone to landscape mode to view this site. If anything looks broken, please request a desktop website! Best experienced in desktop.";
     display: block;
     max-width: 320px;
     padding: 16px 18px;
